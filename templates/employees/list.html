@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+</head>
+<body>
+    <h1>Employees</h1>
+    <ul>
+        {% for employee in employees %}
+       <!--   <li>{{ employee.id }} {{ employee.firstname }} {{ employee.lastname }}</li>-->
+
+        <tr><td>{{ employee.id }}</td><tr><td>{{ employee.firstname }}</td><td>{{ employee.lastname }}</td></tr>
+
+        {% empty %}
+            <li>No employees found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
